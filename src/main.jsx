@@ -1,4 +1,5 @@
-import './public/index.css'
+import './index.css';
+import './data.json'
 
 
 // theme switch (light-dark mood)
