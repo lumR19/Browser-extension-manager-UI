@@ -1,4 +1,4 @@
-import './index.css'
+import './public/index.css'
 
 
 // theme switch (light-dark mood)
