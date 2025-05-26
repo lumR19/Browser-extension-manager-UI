@@ -1,4 +1,4 @@
-import '/public/index.css'
+import './index.css'
 
 
 // theme switch (light-dark mood)
@@ -14,11 +14,11 @@ themeBtn.addEventListener('click', () => {
 
   if(currentTheme === 'dark'){
     document.documentElement.removeAttribute('data-theme')
-    themeBtn.innerHTML = '<img src="/public/images/icon-moon.svg">'
+    themeBtn.innerHTML = '<img src="/images/icon-moon.svg">'
     localStorage.setItem('theme','light')
   }else{
     document.documentElement.setAttribute('data-theme', 'dark')
-    themeBtn.innerHTML = '<img src="/public/images/icon-sun.svg">'
+    themeBtn.innerHTML = '<img src="/images/icon-sun.svg">'
     localStorage.setItem('theme', 'dark')
   }
 })
@@ -32,7 +32,7 @@ let extensionsData = []
 let currentFilter = 'all'
 
 async function fetchExtensions() {
-  const res = await fetch('/public/data.json')
+  const res = await fetch('/data.json')
   extensionsData = await res.json()
   applyFillter(currentFilter)
   
